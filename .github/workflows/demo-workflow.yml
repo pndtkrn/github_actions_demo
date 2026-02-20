@@ -1,0 +1,11 @@
+name: Sample Github Actions Workflow
+on:
+  push:
+    branches:
+    - main
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Read the file
+      run: cat ./README.md
