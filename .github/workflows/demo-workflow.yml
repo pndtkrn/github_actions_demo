@@ -13,7 +13,7 @@ jobs:
     - name: Show current files in the repository
       run: ls -l
       
-    - name: generate files
+    - name: Generate files
       run: bash ./file_generator.sh
 
     - name: Commit and push generated files
