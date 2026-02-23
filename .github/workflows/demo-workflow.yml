@@ -4,11 +4,19 @@ on:
     branches:
     - main
 jobs:
-  first-job:
+  file-generation:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v2
       
-    - name: Read the file
-      run: cat ./README.md
+    - name: generate files
+      run: bash ./file_generator.sh
+
+    - name: Commit and push generated files
+      uses: actions/upload-artifact@v2
+      with:
+        name: generated-files
+        path: file_*.txt
+
+  
