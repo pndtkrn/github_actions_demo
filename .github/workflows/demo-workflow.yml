@@ -51,4 +51,5 @@ jobs:
       run: ls -l file_*.txt
 
     - name: Show custom message
-      run: cat 
+      run: cat ${{ env.CUSTOM_FILE_NAME }}
+      if: ${{ github.event_name == 'workflow_dispatch' }}
