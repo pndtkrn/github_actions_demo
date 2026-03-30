@@ -36,7 +36,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: generated-files
-        path: file_*.txt
+        path: *file_*.txt
 
   list-files:
     runs-on: ubuntu-latest
@@ -48,7 +48,7 @@ jobs:
         name: generated-files
 
     - name: List generated files
-      run: ls -l file_*.txt
+      run: ls -l *file_*.txt
 
     - name: Show custom message
       run: cat ${{ env.CUSTOM_FILE_NAME }}
