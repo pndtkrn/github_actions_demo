@@ -1,0 +1,14 @@
+# support infrastructure IAC deployment code
+deploy_runner/*
+
+# Python bytecode
+__pycache__/
+
+# Python virtual environment
+venv/
+.venv/
+
+# Test and coverage reports
+*.log
+*.coverage
+htmlcov/
